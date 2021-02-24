@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (hero)
+
+mixin hero(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +hero('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' hero--' + modsList[i].trim();
+      }
+    }
+
+  .hero(class=allMods)&attributes(attributes)
+    +picture({
+            'img': 'hero_bg',
+            'alt': 'Hero background image',
+            'ext': 'jpg'
+          })
+
+    .hero__inner
+      picture.hero__title
+        img.picture__img(alt='Hero title', src='img/img_hero_title.svg', width='320')
+
+    block

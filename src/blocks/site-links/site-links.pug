@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (site-links)
+
+mixin site-links(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +site-links('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' site-links--' + modsList[i].trim();
+      }
+    }
+
+  .site-links(class=allMods)&attributes(attributes)
+    block
+  ///.site-links

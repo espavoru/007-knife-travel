@@ -2,17 +2,32 @@ extends ../pug/layout.pug
 
 append config
   -
-    currentTitle = 'Главная'
-    currentDescription = 'Pink app'
+    currentDescription = 'Knife Travel web page'
     currentUrl = 'index.html'
 
-block content
-  h1 Top news
+block header
+  +page-header()
+    +top-nav()
+      +site-links('', 'languages')
+        a.site-links__link.site-links__link--active(href='#') English
+        a.site-links__link(href='#') French
+        a.site-links__link(href='#') Espanol
+      +site-links('', 'popular-destinations')
+        span.site-links__link Popular Destination
+        a.site-links__link(href='#') Kuala Lumpur
+        a.site-links__link(href='#') New York
+        a.site-links__link(href='#') Dubai
+        a.site-links__link(href='#') Paris
+        a.site-links__link(href='#') Bangkok
+    +logo('/')
+      b Knifé
+      |  Travel
+    ///.logo
 
-  ol
-    li Man Found Having Tea Party With Donkey Again
-    li Woman With Epic Tattoo Arrested for 37th Time
-    li Viral Photo of Donkey Had Been Photoshopped
-    li Man Buys Hats For Low Income Local Family
-    li Man Jailed For Threatening Wife With Crumpled Hawk
-    li Small Tornado Forcast in Northern Regions
+    +main-nav('0')
+
+    a.page-header__contact-link(href='tel:+011234567999') 011 234 567 999
+
+block content
+
+  +hero()
