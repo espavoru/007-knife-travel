@@ -31,3 +31,32 @@ block header
 block content
 
   +hero()
+
+  +form('book')
+    +field-text({
+      mods: 'place',
+      attrs: {
+        placeholder: 'Where are you going?',
+        name: 'place'
+      }
+    })
+
+    +field-text({
+      mods: 'date',
+      attrs: {
+        placeholder: 'Thu, Jun 15',
+        name: 'date',
+        type: 'date'
+      }
+    })
+
+    +field-text({
+      mods: 'people',
+      attrs: {
+        placeholder: '2 Adults — 0 Children',
+        name: 'people',
+      }
+    })
+
+    +btn('submit', 'submit')(type='submit')
+  ///.form--book
