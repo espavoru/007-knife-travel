@@ -1,2 +1,4 @@
 src/js/head-script.js
 src/blocks/modernizr/*.js
+src/blocks/upcoming-tours/*.js
+src/blocks/owl-carousel/*.js

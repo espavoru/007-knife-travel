@@ -1,0 +1,78 @@
+//- Все примеси в этом файле должны начинаться c имени блока (upcoming-tours)
+
+mixin upcoming-tours(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +upcoming-tours('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' upcoming-tours--' + modsList[i].trim();
+      }
+    }
+
+  section.upcoming-tours(class=allMods)&attributes(attributes)
+    .upcoming-tours__inner
+      +title({
+        bold: 'Upcoming',
+        light: 'Tours'
+      })
+
+      +plain-text()
+        | Tourism is travel for pleasure or business; also the theory and practice of touring,
+        | the business of attracting, accommodating, and entertaining…
+
+      +owl-carousel()
+        .upcoming-tours__slide-item
+          +picture({
+            'img': 'tour-00',
+            'alt': 'Ancient Roman Road & Aqueducts by bike',
+            'lg': false,
+            'md': false,
+            'ext': jpg
+          }).upcoming-tours__img
+          a.upcoming-tours__title
+            | Ancient Roman Road &
+            | Aqueducts by bike
+          span.upcoming-tours__price from
+            b $550
+        ///.upcoming-tours__slide-item
+
+        .upcoming-tours__slide-item
+          +picture({
+            'img': 'tour-01',
+            'alt': 'Cook Ceviche in a Peruvian home',
+            'lg': false,
+            'md': false,
+            'ext': jpg
+          }).upcoming-tours__img
+          a.upcoming-tours__title
+            | Cook Ceviche in a
+            | Peruvian home
+          span.upcoming-tours__price from
+            b $450
+        ///.upcoming-tours__slide-item
+
+        .upcoming-tours__slide-item
+          +picture({
+            'img': 'tour-02',
+            'alt': 'Whisky and beer at the local barber',
+            'lg': false,
+            'md': false,
+            'ext': jpg
+          }).upcoming-tours__img
+          a.upcoming-tours__title
+            | Whisky and beer
+            | at the local barber
+          span.upcoming-tours__price from
+            b $750
+        ///.upcoming-tours__slide-item
+
+      block
