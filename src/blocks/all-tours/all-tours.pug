@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (all-tours)
+
+mixin all-tours(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +all-tours('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' all-tours--' + modsList[i].trim();
+      }
+    }
+
+  section.all-tours(class=allMods)&attributes(attributes)
+    .all-tours__inner
+      block
+  ///.all-tours

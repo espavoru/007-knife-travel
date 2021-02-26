@@ -62,3 +62,76 @@ block content
   ///.form--book
 
   +upcoming-tours()
+
+  +all-tours()
+    +title({
+      bold: 'Discover Around',
+      light: 'The World'
+    })
+
+    .all-tours__grid
+      .all-tours__item
+        +picture({
+          'img': 'all-tours-00',
+          'alt': 'Ancient Roman Road & Aqueducts by bike',
+          'lg': true,
+          'md': true,
+          'ext': 'jpg'
+        })
+        span.all-tours__tag 15 Tours
+        p.all-tours__title Ancient Roman Road & Aqueducts by bike
+        a.all-tours__link Explore Now
+      ///.all-tours__item
+
+      .all-tours__item
+        +picture({
+          'img': 'all-tours-01',
+          'alt': 'Whisky and beer at the local barber',
+          'lg': true,
+          'md': true,
+          'ext': 'jpg'
+        })
+        span.all-tours__tag 12 Tours
+        p.all-tours__title Whisky and beer at the local barber
+        a.all-tours__link Explore Now
+      ///.all-tours__item
+
+      .all-tours__item
+        +picture({
+          'img': 'all-tours-02',
+          'alt': 'Paris photo walk with Leo Iglesias',
+          'lg': false,
+          'md': false,
+          'ext': 'jpg'
+        })
+        span.all-tours__tag 21 Tours
+        p.all-tours__title Paris photo walk with Leo Iglesias
+        a.all-tours__link Explore Now
+      ///.all-tours__item
+
+      .all-tours__item
+        +picture({
+          'img': 'all-tours-03',
+          'alt': 'Art Studio Spark your creativity',
+          'lg': false,
+          'md': false,
+          'ext': 'jpg'
+        })
+        span.all-tours__tag 16 Tours
+        p.all-tours__title Art Studio Spark your creativity
+        a.all-tours__link Explore Now
+      ///.all-tours__item
+
+      .all-tours__item
+        +picture({
+          'img': 'all-tours-04',
+          'alt': 'Essence of Iceland own custom souvenir',
+          'lg': false,
+          'md': false,
+          'ext': 'jpg'
+        })
+        span.all-tours__tag 19 Tours
+        p.all-tours__title Essence of Iceland own custom souvenir
+        a.all-tours__link Explore Now
+      ///.all-tours__item
+    ///.all-tours__grid
