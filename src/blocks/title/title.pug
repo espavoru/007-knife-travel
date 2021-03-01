@@ -8,7 +8,10 @@ mixin title(data, mods)
   //-     -light  {string} - light text
   //-   mods      {string} - список модификаторов
   //- Вызов:
-        +title('Текст', 'some-mod')
+        +title({
+          bold: 'Upcoming',
+          light: 'Tours'
+        })
 
   -
     // список модификаторов

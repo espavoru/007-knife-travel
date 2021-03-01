@@ -135,3 +135,89 @@ block content
         a.all-tours__link Explore Now
       ///.all-tours__item
     ///.all-tours__grid
+
+  +best-offers()
+    +title({
+      bold: 'Best',
+      light: 'Offers'
+    })
+
+    +btn('View All Offers')(href='#')
+
+    .best-offers__item
+      +picture({
+        'img': 'best-offers-01',
+        'alt': 'Paris, France',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg',
+        'width': 170
+      })
+      p.best-offers__text
+        b Paris, France
+        | Panorama City
+      p.best-offers__text
+        b 7 Days
+        | 6 Nights
+      p.best-offers__text
+        b 11 February
+        | 06:30 PM
+      p.best-offers__text
+        b $ 1889
+        | It was $ 2449
+      p.best-offers__text
+        b $ 560
+        | Save 20%
+    ///.best-offers__item
+
+    .best-offers__item.best-offers__item--active
+      +picture({
+        'img': 'best-offers-02',
+        'alt': 'Dublin, Ireland',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg',
+        'width': 170
+      })
+      p.best-offers__text
+        b Dublin, Ireland
+        | Car Roadtrip
+      p.best-offers__text
+        b 4 Days
+        | 5 Nights
+      p.best-offers__text
+        b 16 February
+        | 09:00 AM
+      p.best-offers__text
+        b $ 1400
+        | It was $ 1900
+      p.best-offers__text
+        b $ 500
+        | Save 25%
+    ///.best-offers__item
+
+    .best-offers__item
+      +picture({
+        'img': 'best-offers-03',
+        'alt': 'Berlin, Germany',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg',
+        'width': 170
+      })
+      p.best-offers__text
+        b Berlin, Germany
+        | Museums & City
+      p.best-offers__text
+        b 9 Days
+        | 10 Nights
+      p.best-offers__text
+        b 12 February
+        | 09:00 AM
+      p.best-offers__text
+        b $ 1450
+        | It was $ 1950
+      p.best-offers__text
+        b $ 550
+        | Save 25%
+    ///.best-offers__item

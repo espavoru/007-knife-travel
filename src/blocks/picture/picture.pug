@@ -16,7 +16,7 @@ mixin picture(data, mods)
           'alt': 'alt',
           'lg': true,
           'md': true,
-          'ext': jpg
+          'ext': 'jpg'
         })
 
   -
@@ -34,6 +34,7 @@ mixin picture(data, mods)
     data.lg = typeof(data.lg) == 'undefined' ? true : data.lg
     data.md = typeof(data.md) == 'undefined' ? true : data.md
     data.ext = typeof(data.ext) == 'undefined' ? 'jpg' : data.ext
+    data.width = typeof(data.width) == 'undefined' ? '320' : data.width
 
   picture.picture(class=allMods)&attributes(attributes)
 
@@ -45,4 +46,4 @@ mixin picture(data, mods)
       source(media=`(min-width: ${screenMd})`, type=`image/${data.ext}`, srcset=`img/${data.img}-md.${data.ext}, img/${data.img}-md@2x.${data.ext} 2x`)
     if (typeof(data.ext) !== 'undefined' && data.ext != 'svg')
       source(media=`(min-width: ${screenSm})`, type='image/webp', srcset=`img/${data.img}-sm.webp, img/${data.img}-sm@2x.webp 2x`)
-      img.picture__img(alt=`${data.alt}`, width='320', src=`img/${data.img}-sm.${data.ext}`, srcset=`img/${data.img}-sm@2x.${data.ext} 2x`)
+      img.picture__img(alt=`${data.alt}`, width=`${data.width}`, src=`img/${data.img}-sm.${data.ext}`, srcset=`img/${data.img}-sm@2x.${data.ext} 2x`)

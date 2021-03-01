@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (best-offers)
+
+mixin best-offers(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +best-offers('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' best-offers--' + modsList[i].trim();
+      }
+    }
+
+  section.best-offers(class=allMods)&attributes(attributes)
+    .best-offers__inner
+      block
+    ///.best-offers__inner
+  ///.best-offers
