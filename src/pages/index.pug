@@ -221,3 +221,56 @@ block content
         b $ 550
         | Save 25%
     ///.best-offers__item
+
+  +blog()
+    +title({
+      bold: 'Explore the Travel',
+      light: 'Trough our Blog & Journal',
+    })
+
+    article.blog__item
+      +picture({
+        'img': 'blog-01',
+        'alt': 'Hiking Greenland’s Arctic Circle Trail 2019',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg'
+      })
+      h3.blog__title Hiking Greenland’s Arctic Circle Trail 2019
+      p.blog__descr.
+        Tourism is travel for pleasure or business; also the theory
+        and practice of touring, the business of attracting, accommodating…
+      a.blog__link Read More
+    ///.blog__item
+
+    article.blog__item
+      +picture({
+        'img': 'blog-02',
+        'alt': 'Why You Shouldn’t  Ride Elephants in Indonesia',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg'
+      })
+      h3.blog__title Why You Shouldn’t  Ride Elephants in Indonesia
+      p.blog__descr.
+        Tourism is travel for pleasure or business; also the theory
+        and practice of touring, the business of attracting, accommodating…
+      a.blog__link Read More
+    ///.blog__item
+
+    article.blog__item
+      +picture({
+        'img': 'blog-03',
+        'alt': 'Best Travel Quotes For Inspiration Travel Blog',
+        'lg': false,
+        'md': false,
+        'ext': 'jpg'
+      })
+      h3.blog__title Best Travel Quotes For Inspiration Travel Blog
+      p.blog__descr.
+        Tourism is travel for pleasure or business; also the theory
+        and practice of touring, the business of attracting, accommodating…
+      a.blog__link Read More
+    ///.blog__item
+
+    +btn('Read our Blog')(href='#')
