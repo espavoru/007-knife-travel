@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (testimonials)
+
+mixin testimonials(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +testimonials('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' testimonials--' + modsList[i].trim();
+      }
+    }
+
+  section.testimonials(class=allMods)&attributes(attributes)
+    .testimonials__inner
+      block
+    ///.testimonials__inner
+  ///.testimonials

@@ -225,7 +225,7 @@ block content
   +blog()
     +title({
       bold: 'Explore the Travel',
-      light: 'Trough our Blog & Journal',
+      light: 'Through our Blog & Journal',
     })
 
     article.blog__item
@@ -274,3 +274,46 @@ block content
     ///.blog__item
 
     +btn('Read our Blog')(href='#')
+
+  +testimonials()
+    +title({
+      bold: 'Travel Tours',
+      light: 'Testimonials'
+    })
+
+    +plain-text()
+      | Tourism is travel for pleasure or business; also the theory and practice of
+      | touring, the business of attracting, accommodating, and entertaining…
+
+    +owl-carousel()
+      blockquote.testimonials__slide-item
+        i.testimonials__stars
+        time.testimonials__time(datetime='2021-07-17') July 17th
+        h3.testimonials__title Everything was amazing!
+        p.testimonials__text.
+          We enjoyed our Israel trip immensely. The hotels were wonderful…
+          We really enjoyed Meir, our tour guide. He was so knowledgeable.
+          His experience as a soldier and commander in the ‘67 war and the
+          Yom Kippur War made us feel like we were seeing the country through
+          the eyes of a person that was instrumental in its formation and growth. A true Sabra!
+        cite.testimonials__author
+          img.testimonials__img(alt='Maja Christiansen', width='50', src='img/testimonials-01.jpg')
+          h4.testimonials__name Maja Christiansen
+          p.testimonials__descr Paris, France Museum Tour
+      ///.testimonials__slide-item
+
+      blockquote.testimonials__slide-item
+        i.testimonials__stars
+        time.testimonials__time(datetime='2021-06-05') June 5th
+        h3.testimonials__title Awesome Experience!
+        p.testimonials__text.
+          We enjoyed our Israel trip immensely. The hotels were wonderful…
+          We really enjoyed Meir, our tour guide. He was so knowledgeable.
+          His experience as a soldier and commander in the ‘67 war and the
+          Yom Kippur War made us feel like we were seeing the country through
+          the eyes of a person that was instrumental in its formation and growth. A true Sabra!
+        cite.testimonials__author
+          img.testimonials__img(alt='Sofie Olsen', width='50', src='img/testimonials-02.jpg')
+          h4.testimonials__name Sofie Olsen
+          p.testimonials__descr Paris, France Museum Tour
+      ///.testimonials__slide-item
