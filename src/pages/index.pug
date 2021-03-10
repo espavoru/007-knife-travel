@@ -430,3 +430,17 @@ block content
         }
       })
       input.newsletter__submit(type='submit', value='Subscribe')
+
+block footer
+  +page-footer()
+    +logo('/')
+      img.logo__img(alt='Logo', width='134', src='img/logo_bottom.svg')
+
+    +footer-nav()
+      li: a.footer-nav__link.footer-nav__link--active Home
+      li: a.footer-nav__link About
+      li: a.footer-nav__link Tours
+      li: a.footer-nav__link Blog
+      li: a.footer-nav__link Contact
+
+    a.page-footer__contact(href='tel:011 234 567 999') 011 234 567 999

@@ -1,12 +1,12 @@
-//- Все примеси в этом файле должны начинаться c имени блока (newsletter)
+//- Все примеси в этом файле должны начинаться c имени блока (footer-nav)
 
-mixin newsletter(data, mods)
+mixin footer-nav(data, mods)
 
   //- Принимает:
   //-   data    {object} - данные
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +newsletter('Текст', 'some-mod')
+        +footer-nav('Текст', 'some-mod')
 
   -
     // список модификаторов
@@ -14,12 +14,10 @@ mixin newsletter(data, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' newsletter--' + modsList[i].trim();
+        allMods = allMods + ' footer-nav--' + modsList[i].trim();
       }
     }
 
-  section.newsletter(class=allMods)&attributes(attributes)
-    .newsletter__inner
+  nav.footer-nav(class=allMods)&attributes(attributes)
+    ul.footer-nav__inner
       block
-    ///.newsletter__inner
-  ///.newsletter

@@ -48,3 +48,5 @@ mixin picture(data, mods)
     if (typeof(data.ext) !== 'undefined' && data.ext != 'svg')
       source(media=`(min-width: ${screenSm})`, type='image/webp', srcset=`img/${data.img}-sm.webp, img/${data.img}-sm@2x.webp 2x`)
       img.picture__img(alt=`${data.alt}`, width=`${data.width}`, src=`img/${data.img}-sm.${data.ext}`, srcset=`img/${data.img}-sm@2x.${data.ext} 2x`)
+
+    block
