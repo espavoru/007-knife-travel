@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (newsletter)
+
+mixin newsletter(data, mods)
+
+  //- Принимает:
+  //-   data    {object} - данные
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +newsletter('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' newsletter--' + modsList[i].trim();
+      }
+    }
+
+  .newsletter(class=allMods)&attributes(attributes)
+    .newsletter__inner
+      block
+    ///.newsletter__inner
+  ///.newsletter

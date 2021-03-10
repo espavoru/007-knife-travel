@@ -318,98 +318,115 @@ block content
           p.testimonials__descr Paris, France Museum Tour
       ///.testimonials__slide-item
 
-    +instagram()
-      +title({
-        bold: 'Get Inspired with',
-        light: 'Photos from Instagram'
-      })
+  +instagram()
+    +title({
+      bold: 'Get Inspired with',
+      light: 'Photos from Instagram'
+    })
 
-      +picture({
-        'img': 'instagram-01',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-01',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-02',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-02',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-03',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-03',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-04',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-04',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-05',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-05',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-06',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-06',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-07',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-07',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-08',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-08',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-09',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
-      })
+    +picture({
+      'img': 'instagram-09',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
 
-      +picture({
-        'img': 'instagram-10',
-        'alt': 'instagram post',
-        'lg': false,
-        'md': false,
-        'width': 234,
-        'ext': 'jpg'
+    +picture({
+      'img': 'instagram-10',
+      'alt': 'instagram post',
+      'lg': false,
+      'md': false,
+      'width': 234,
+      'ext': 'jpg'
+    })
+
+  +newsletter()
+    +title({
+      bold: 'Subscribe to our Newsletter',
+      light: 'Tourism is travel for pleasure or business'
+    })
+
+    +form('newsletter')
+      +field-text({
+        mods: 'email',
+        attrs: {
+          placeholder: 'Type Your Email',
+          name: 'sub_email',
+          type: 'email'
+        }
       })
+      input.newsletter__submit(type='submit', value='Subscribe')
