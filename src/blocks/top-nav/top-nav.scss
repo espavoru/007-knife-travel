@@ -5,4 +5,25 @@
 .top-nav {
 
   $block-name:                &; // #{$block-name}__element
+
+  background-color: #f2f4f6;
+
+  &__inner {
+    @include container();
+
+    @media (min-width: $screen-md) {
+      @include row(
+        $sm-grid-gutter: 0,
+        $md-grid-gutter: 0,
+        $lg-grid-gutter: 0,
+        $xl-grid-gutter: 0,
+        $xxl-grid-gutter: 0
+      );
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 }

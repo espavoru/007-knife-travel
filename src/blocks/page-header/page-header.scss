@@ -5,4 +5,61 @@
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+
+    @include row(
+      $xs-grid-gutter: 0,
+      $sm-grid-gutter: 0,
+      $md-grid-gutter: 0,
+      $lg-grid-gutter: 0,
+      $xl-grid-gutter: 0,
+      $xxl-grid-gutter: 0
+    );
+  }
+
+  &__contact-link {
+    @include col(xs, 7, 12, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-top: 8px;
+    padding-top: 10px;
+    padding-right: 38px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: right;
+    color: $text-color-accent;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+
+      margin-right: 6px;
+
+      background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM11.6139 13.213C11.1688 13.6582 10.4888 13.7685 9.92576 13.487C9.36272 13.2055 8.68271 13.3158 8.23759 13.7609L6.72087 15.2777C6.46067 15.5379 6.56526 15.9809 6.91436 16.0973C9.04885 16.8088 11.4021 16.2533 12.9931 14.6623L14.8989 12.7564C16.4333 11.2221 16.8137 8.87806 15.8433 6.93724C15.715 6.68077 15.3732 6.6253 15.1705 6.82806L13.4995 8.49899C13.0544 8.94411 12.9441 9.62412 13.2256 10.1872C13.5071 10.7502 13.3968 11.4302 12.9516 11.8753L11.6139 13.213Z" fill="%2349BCF7"/%3E%3C/svg%3E%0A');
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: $screen-md) {
+        background-image: url('data:image/svg+xml,%3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM11.6139 13.213C11.1688 13.6582 10.4888 13.7685 9.92576 13.487C9.36272 13.2055 8.68271 13.3158 8.23759 13.7609L6.72087 15.2777C6.46067 15.5379 6.56526 15.9809 6.91436 16.0973C9.04885 16.8088 11.4021 16.2533 12.9931 14.6623L14.8989 12.7564C16.4333 11.2221 16.8137 8.87806 15.8433 6.93724C15.715 6.68077 15.3732 6.6253 15.1705 6.82806L13.4995 8.49899C13.0544 8.94411 12.9441 9.62412 13.2256 10.1872C13.5071 10.7502 13.3968 11.4302 12.9516 11.8753L11.6139 13.213Z" fill="%2349BCF7"/%3E%3C/svg%3E%0A');
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      @include col(md, 3, 12, 0);
+
+      margin-top: 0;
+      font-size: 14px;
+    }
+  }
 }
