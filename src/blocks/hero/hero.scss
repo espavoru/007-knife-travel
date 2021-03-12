@@ -5,4 +5,82 @@
 .hero {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+
+  .picture__img {
+    width: 100%;
+    max-width: unset;
+    object-fit: cover;
+  }
+
+  .btn {
+    height: 50px;
+    margin-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    font-size: 14px;
+    line-height: 40px;
+    color: $white;
+
+    background: linear-gradient(225deg, #fdd6bd 0%, #f794a4 100%);
+    box-shadow: 0 20px 40px rgba($color: #000000, $alpha: 0.5);
+
+    @media (min-width: $screen-md) {
+      height: 60px;
+
+      font-size: 16px;
+      line-height: 50px;
+    }
+  }
+
+  &__inner {
+    @include container();
+
+    position: absolute;
+    top: 0;
+
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-top: 50%;
+
+    @media (min-width: $screen-sm) {
+      width: 80%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 70%;
+      margin-top: 30%;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 7%;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $white;
+
+    @media (min-width: $screen-sm) {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+      font-size: 20px;
+    }
+  }
 }
