@@ -5,4 +5,19 @@
 .title {
 
   $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 20px;
+
+  font-size: 38px;
+  font-weight: 300;
+  color: #939fa4;
+
+  @media (min-width: $screen-md) {
+    font-size: 48px;
+  }
+
+  &__bold {
+    font-weight: 700;
+    color: #24282a;
+  }
 }
